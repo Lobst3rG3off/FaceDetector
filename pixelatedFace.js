@@ -7,11 +7,18 @@ const faceCtx = faceCanvas.getContext('2d');
 const faceDetector = new window.FaceDetector();
 const SIZE = 10;
 const SCALE = 1.35;
+const optionsInputs = document.querySelector('.controls input [type="range"]')
 
 const options = {
     SIZE: 10,
     SCALE: 1.35,
 }
+
+
+function handleOption(event) {
+    console.log(event)
+}
+
 
 
 //write a function that will populate the users video
