@@ -8,6 +8,11 @@ const faceDetector = new window.FaceDetector();
 const SIZE = 10;
 const SCALE = 1.35;
 
+const options = {
+    SIZE: 10,
+    SCALE: 1.35,
+}
+
 
 //write a function that will populate the users video
 
@@ -55,19 +60,19 @@ face.width,
 face.height,
 face.x,
 face.y,
-SIZE,
-SIZE
+options.SIZE,
+options.SIZE
     );
 
-    const width = face.width * SCALE;
-    const height = face.height * SCALE;
+    const width = face.width * options.SCALE;
+    const height = face.height * options.SCALE;
     // take that face back out and draw it back at normal size
     faceCtx.drawImage(
         faceCanvas,
         face.x, // where does the source pull from
         face.y ,
-        SIZE,
-        SIZE,
+        options.SIZE,
+        options.SIZE,
         face.x - (width - face.width) / 2,
         face.y- (height - face.height) / 2,
         width,
